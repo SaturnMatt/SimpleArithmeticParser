@@ -3,7 +3,7 @@
 // https://github.com/SaturnMatt/SimpleArithmeticParser
 // Created: 2023-03-25
 //
-// This project is an educational arithmetic expression parser that
+// This project is a simple arithmetic expression parser that
 // demonstrates recursive descent parsing techniques in C++.
 //
 // Released under the MIT License. For details, see the accompanying LICENSE file
@@ -11,7 +11,6 @@
 
 #include "parser.h"
 
-// Constructor
 Parser::Parser(const std::string& input) : input(input), pos(0) {}
 
 // Main parsing function
@@ -25,14 +24,8 @@ int Parser::parse() {
     return result;
 }
 
-// Skips whitespace characters in the input string
-void Parser::skip_whitespace() {
-    while (pos < input.size() && std::isspace(input[pos])) {
-        pos++;
-    }
-}
 
-// Parses an expression consisting of terms separated by '+' or '-'
+// Expression consisting of terms separated by '+' or '-'
 int Parser::parse_expression() {
     int left = parse_term();
     skip_whitespace();
@@ -47,7 +40,7 @@ int Parser::parse_expression() {
     return left;
 }
 
-// Parses a term consisting of factors separated by '*' or '/'
+// Term consisting of factors separated by '*' or '/'
 int Parser::parse_term() {
     int left = parse_factor();
     skip_whitespace();
@@ -62,7 +55,7 @@ int Parser::parse_term() {
     return left;
 }
 
-// Parses a factor, which is either an expression in parentheses or an integer
+// Factor is either an expression in parentheses or an integer
 int Parser::parse_factor() {
     int value;
     skip_whitespace();
@@ -87,11 +80,16 @@ int Parser::parse_factor() {
     return value;
 }
 
-// Parses an integer value from the input string
 int Parser::parse_integer() {
     int value = 0;
     while (pos < input.size() && std::isdigit(input[pos])) {
         value = value * 10 + (input[pos++] - '0');
     }
     return value;
+}
+
+void Parser::skip_whitespace() {
+    while (pos < input.size() && std::isspace(input[pos])) {
+        pos++;
+    }
 }
