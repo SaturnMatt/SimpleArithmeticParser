@@ -1,7 +1,5 @@
 // SimpleArithmeticParser
-// Copyright (c) 2023 Matt Moen
 // https://github.com/SaturnMatt/SimpleArithmeticParser
-// Created: 2023-03-25
 //
 // This project is a simple arithmetic expression parser that
 // demonstrates recursive descent parsing techniques in C++.
