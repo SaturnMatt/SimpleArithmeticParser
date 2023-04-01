@@ -1,6 +1,6 @@
 # SimpleArithmeticParser
 
-SimpleArithmeticParser is an educational arithmetic expression parser written in C++ that demonstrates recursive descent parsing techniques. The parser can evaluate expressions with addition, subtraction, multiplication, and division operators, as well as handle parentheses and follow the order of operations (PEMDAS).
+SimpleArithmeticParser is an arithmetic expression parser written in C++ that demonstrates recursive descent parsing techniques. The parser can evaluate expressions with addition, subtraction, multiplication, and division operators, as well as handle parentheses and follow the order of operations (PEMDAS).
 
 ## Recursive Descent Parsing
 
