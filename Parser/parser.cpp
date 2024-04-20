@@ -77,6 +77,7 @@ int Parser::parse_factor() {
     return value;
 }
 
+// Parse an integer
 int Parser::parse_integer() {
     int value = 0;
     while (pos < input.size() && std::isdigit(input[pos])) {
@@ -85,6 +86,7 @@ int Parser::parse_integer() {
     return value;
 }
 
+// Skip whitespace characters
 void Parser::skip_whitespace() {
     while (pos < input.size() && std::isspace(input[pos])) {
         pos++;

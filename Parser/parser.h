@@ -7,7 +7,8 @@
 // Released under the MIT License. For details, see the accompanying LICENSE file
 // or visit https://opensource.org/licenses/MIT
 
-#pragma once
+#ifndef PARSER_H
+#define PARSER_H
 
 #include <string>
 #include <cctype>
@@ -28,3 +29,5 @@ private:
     int parse_factor();
     int parse_integer();
 };
+
+#endif

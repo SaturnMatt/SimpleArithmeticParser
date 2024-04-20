@@ -66,7 +66,7 @@ You can find the source files in the [SimpleArithmeticParser repository](https:/
 ## How to Use the Parser
 
 1. Clone the repository and compile the code using a C++11 compatible compiler:
-`g++ -std=c++11 main.cpp -o parser`
+`g++ -Wall -g -o myprogram main.cpp parser.cpp`
 2. Run the parser executable:
 `./parser`
 3. Enter an arithmetic expression when prompted:
